@@ -4,10 +4,10 @@ var app = require('../app');
 
 describe('Ticker API', function() {
   describe('GET /ticker', function() {
-    it('should return a summary of BTC', function(done) {
-      process.env.SLACK_HOST = "requestb.in";
-      process.env.SLACK_PATH = "/100n9j91";
-      process.env.SLACK_TOKEN = "FAKE_TOKEN";
+    it('send a summary of BTC price to slack', function(done) {
+      process.env.SLACK_HOST = "i0iu2uxnu8gt.runscope.net";
+      process.env.SLACK_PATH = "/services/hooks/incoming-webhook";
+      process.env.SLACK_TOKEN = "qzxBRDfVpihcn3Ja3eh0Dh2M";
 
       request(app)
       .get('/ticker')
